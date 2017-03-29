@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lowa19.homework2coloring.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Part"
+            android:id="@+id/currElement"
+            android:layout_weight="1"
+            android:textSize="45dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white" />
+
+        <com.example.lowa19.homework2.myCustomPicture
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/surfaceView"
+            android:layout_below="@+id/currElement"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="20"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/redRow"
+            android:background="@android:color/holo_red_light"
+            android:paddingLeft="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Red Value"
+                android:id="@+id/redText"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:paddingRight="100dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rSeekBar"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:max="255" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/greenRow"
+            android:background="@android:color/holo_green_light"
+            android:paddingLeft="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Green Value"
+                android:id="@+id/greenText"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:paddingRight="100dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gSeekBar"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:max="255"
+                android:paddingLeft="100dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/blueRow"
+            android:background="@android:color/holo_blue_bright"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Blue Value"
+                android:id="@+id/blueText"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:paddingRight="100dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bSeekBar"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:max="255" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
